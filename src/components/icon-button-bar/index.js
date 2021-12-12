@@ -28,6 +28,8 @@ function IconButtonBar({ links = {} }) {
         return <EmailIcon {...props} />;
       case 'linkedIn':
         return <LinkedInIcon {...props} />;
+      case 'CV':
+        return <DescriptionIcon {...props} />;
       default:
         return <></>;
     }

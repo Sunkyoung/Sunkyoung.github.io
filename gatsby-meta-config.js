@@ -21,6 +21,7 @@ module.exports = {
       github: `https://github.com/Sunkyoung`, // `https://github.com/zoomKoding`,
       linkedIn: `https://www.linkedin.com/in/sunkyoung-kim`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
       email: `sunkyoung@kaist.ac.kr`, // `zoomkoding@gmail.com`,
+      CV: ``,
     },
   },
 
