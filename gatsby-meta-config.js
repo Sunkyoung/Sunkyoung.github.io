@@ -21,48 +21,49 @@ module.exports = {
       github: `https://github.com/Sunkyoung`, // `https://github.com/zoomKoding`,
       linkedIn: `https://www.linkedin.com/in/sunkyoung-kim`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
       email: `sunkyoung@kaist.ac.kr`, // `zoomkoding@gmail.com`,
-      CV: ``,
+      englishCV: `/CV_SunkyoungKim.pdf`,
+      koreanResume: 'https://sunkyoung.notion.site/sunkyoung/Sunkyoung-Kim-b15dbaac792d4f368f5e88591641c631',
     },
   },
 
   // metadata for About Page
-  about: {
-    timestamps: [
-      // =====       [Timestamp Sample and Structure]      =====
-      // ===== 🚫 Don't erase this sample (여기 지우지 마세요!) =====
-      {
-        date: '',
-        activity: '',
-        links: {
-          github: '',
-          post: '',
-          googlePlay: '',
-          appStore: '',
-          demo: '',
-        },
-      },
-      // ========================================================
-      // ========================================================
-    ],
+  // about: {
+  //   timestamps: [
+  //     // =====       [Timestamp Sample and Structure]      =====
+  //     // ===== 🚫 Don't erase this sample (여기 지우지 마세요!) =====
+  //     {
+  //       date: '',
+  //       activity: '',
+  //       links: {
+  //         github: '',
+  //         post: '',
+  //         googlePlay: '',
+  //         appStore: '',
+  //         demo: '',
+  //       },
+  //     },
+  //     // ========================================================
+  //     // ========================================================
+  //   ],
 
-    projects: [
-      // =====        [Project Sample and Structure]        =====
-      // ===== 🚫 Don't erase this sample (여기 지우지 마세요!)  =====
-      {
-        title: '',
-        description: '',
-        techStack: ['', ''],
-        thumbnailUrl: '',
-        links: {
-          post: '',
-          github: '',
-          googlePlay: '',
-          appStore: '',
-          demo: '',
-        },
-      },
-      // ========================================================
-      // ========================================================
-    ],
-  },
+  //   projects: [
+  //     // =====        [Project Sample and Structure]        =====
+  //     // ===== 🚫 Don't erase this sample (여기 지우지 마세요!)  =====
+  //     {
+  //       title: '',
+  //       description: '',
+  //       techStack: ['', ''],
+  //       thumbnailUrl: '',
+  //       links: {
+  //         post: '',
+  //         github: '',
+  //         googlePlay: '',
+  //         appStore: '',
+  //         demo: '',
+  //       },
+  //     },
+  //     // ========================================================
+  //     // ========================================================
+  //   ],
+  // },
 };
