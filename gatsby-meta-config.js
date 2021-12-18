@@ -27,43 +27,43 @@ module.exports = {
   },
 
   // metadata for About Page
-  // about: {
-  //   timestamps: [
-  //     // =====       [Timestamp Sample and Structure]      =====
-  //     // ===== 🚫 Don't erase this sample (여기 지우지 마세요!) =====
-  //     {
-  //       date: '',
-  //       activity: '',
-  //       links: {
-  //         github: '',
-  //         post: '',
-  //         googlePlay: '',
-  //         appStore: '',
-  //         demo: '',
-  //       },
-  //     },
-  //     // ========================================================
-  //     // ========================================================
-  //   ],
+  about: {
+    timestamps: [
+      // =====       [Timestamp Sample and Structure]      =====
+      // ===== 🚫 Don't erase this sample (여기 지우지 마세요!) =====
+      {
+        date: '',
+        activity: '',
+        links: {
+          github: '',
+          post: '',
+          googlePlay: '',
+          appStore: '',
+          demo: '',
+        },
+      },
+      // ========================================================
+      // ========================================================
+    ],
 
-  //   projects: [
-  //     // =====        [Project Sample and Structure]        =====
-  //     // ===== 🚫 Don't erase this sample (여기 지우지 마세요!)  =====
-  //     {
-  //       title: '',
-  //       description: '',
-  //       techStack: ['', ''],
-  //       thumbnailUrl: '',
-  //       links: {
-  //         post: '',
-  //         github: '',
-  //         googlePlay: '',
-  //         appStore: '',
-  //         demo: '',
-  //       },
-  //     },
-  //     // ========================================================
-  //     // ========================================================
-  //   ],
-  // },
+    projects: [
+      // =====        [Project Sample and Structure]        =====
+      // ===== 🚫 Don't erase this sample (여기 지우지 마세요!)  =====
+      {
+        title: '',
+        description: '',
+        techStack: ['', ''],
+        thumbnailUrl: '',
+        links: {
+          post: '',
+          github: '',
+          googlePlay: '',
+          appStore: '',
+          demo: '',
+        },
+      },
+      // ========================================================
+      // ========================================================
+    ],
+  },
 };
