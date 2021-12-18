@@ -15,7 +15,7 @@ module.exports = {
     bio: {
       role: `NLP Researcher`,
       description: ['우물 밖 개구리가 되려는', '데이터 기반의 사고를 가진', '더 나은 세상을 만들고 싶은', '끊임없이 도전하는'],
-      thumbnail: 'mailfrog.jpg', // Path to the image in the 'asset' folder
+      thumbnail: 'mainfrog.jpg', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/Sunkyoung`, // `https://github.com/zoomKoding`,
