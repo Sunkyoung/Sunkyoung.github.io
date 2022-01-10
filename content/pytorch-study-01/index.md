@@ -1,10 +1,10 @@
 ---
 emoji: 🔥
-title: AI Programming with PyTorch Study - 01 NumPy
+title: [Review AI504] 01 - NumPy
 date: '2021-01-10 09:30:00'
 author: 선경
-tags: NumPy, Deep Learning
-categories: Deep Learning
+tags: NumPy DeepLearning
+categories: Deeplearning 
 ---
 
 ## 0. NumPy
