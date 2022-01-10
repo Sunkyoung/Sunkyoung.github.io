@@ -1,7 +1,7 @@
 ---
 emoji: 🔥
 title: [Review AI504] 01 - NumPy
-date: '2021-01-10 09:30:00'
+date: '2022-01-10 09:30:00'
 author: 선경
 tags: NumPy DeepLearning
 categories: Deeplearning 
