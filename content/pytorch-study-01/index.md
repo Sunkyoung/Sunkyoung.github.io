@@ -511,6 +511,8 @@ foo(M, W)
 </div>
 </details>
 
+<br>
+👉🏼  관련 실습 코드 : https://github.com/Sunkyoung/PyTorch-Study/blob/main/PyTorch_Study_01_NumPy.ipynb
 
 ```toc
 
