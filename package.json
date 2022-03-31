@@ -21,6 +21,7 @@
     "gatsby-remark-autolink-headers": "^4.11.0",
     "gatsby-remark-copy-linked-files": "^4.10.0",
     "gatsby-remark-images": "^5.10.0",
+    "gatsby-remark-katex": "^6.11.0",
     "gatsby-remark-prismjs": "^5.10.0",
     "gatsby-remark-responsive-iframe": "^4.10.0",
     "gatsby-remark-smartypants": "^4.10.0",
@@ -29,6 +30,7 @@
     "gatsby-theme-material-ui": "^5.0.0",
     "gatsby-transformer-remark": "^4.10.0",
     "gatsby-transformer-sharp": "^3.13.0",
+    "katex": "^0.15.3",
     "prismjs": "^1.24.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -50,12 +52,11 @@
     "build": "gatsby clean && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "deploy": "gatsby clean && gatsby build && gh-pages -d public",
+    "deploy": "gatsby build && gh-pages -d public",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",

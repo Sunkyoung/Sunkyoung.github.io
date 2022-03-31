@@ -176,27 +176,17 @@ Overfitting 문제를 완화하기 위한 방법 중 Regularization(정규화) �
 
 Ridge Regression (릿지 회귀) 방법은 L2 Regression으로 불리며, 학습 시 Cost function (비용 함수)에 Loss의 가중치 값들에 대한 L2 regularization term을 더하여 모델의 자유도를 제한한다.
 
-예를 들어, 6차원의 다항식에 대해 다항회귀를 할 때 
-
-<!-- $$w^Tx+b = w_6x^6+w_5x^5+...+w_1x^1+ b$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div>
+예를 들어, 6차원의 다항식 ( $w^Tx+b = w_6x^6+w_5x^5+...+w_1x^1+ b$ ) 에 대해 다항회귀를 할 때  
 
 릿지 회귀 방법에서의 비용 함수는 아래와 같이 표현된다. 
 
-<!-- $$
+$$
 L(y,y')+\frac{\alpha}{2}\lVert w\rVert^2
-$$ --> 
+$$
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=L(y%2Cy')%2B%5Cfrac%7B%5Calpha%7D%7B2%7D%5ClVert%20w%5CrVert%5E2"></div>
+여기에서 $\alpha$ 는 제한의 정도(penalty) 지정하는 hyperparameter이다. 
 
-여기에서 <!-- $$\alpha$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 는 제한의 정도(penalty) 지정하는 hyperparameter이다. <!-- $$\alpha$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 가 0이면 linear regression 이고, <!-- $$\alpha$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 값이 커질 경우 모든 가중치들이 0과 가깝게 되어 예측 값이 데이터들의 평균에 가깝게 flat 한 형태가 된다.
+$\alpha$ 가 0이면 linear regression 이고, $\alpha$ 값이 커질 경우 모든 가중치들이 0과 가깝게 되어 예측 값이 데이터들의 평균에 가깝게 flat 한 형태가 된다.
 
 ![ridge_alpha](img/ridge_alpha.png)
 
@@ -216,11 +206,9 @@ Lasso (**L**east **A**bsolute **S**hrinkage and **S**election **O**perator) Regr
 
 위에 설명한 6차원의 다항식을 토대로, 라쏘 회귀에서의 비용 함수는 다음과 같다.
 
-<!-- $$
+$$
 L(y,y')+\alpha(|w_6|+|w_5|+...+|w_1|)
-$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=L(y%2Cy')%2B%5Calpha(%7Cw_6%7C%2B%7Cw_5%7C%2B...%2B%7Cw_1%7C)"></div>
+$$
 
 라쏘 회귀의 큰 특징 중 하나는 중요하지 않은 feature들의 가중치를 제거하는 경향이 있다는 것이다. 
 
@@ -243,11 +231,9 @@ lasso_reg.predict([[1.5]])
 
 Elastic Net은 Ridge Regression 과 Lasso Regression의 중간으로, 두 regularization term을 섞어 사용한다. mix ratio r 으로 조절할 수 있다.
 
-<!-- $$
+$$
 L(y,y')+r\alpha(\sum_{i=1}^n|w_i|)+\frac{l-r}{2}\alpha\lVert w\rVert^2
-$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=L(y%2Cy')%2Br%5Calpha(%5Csum_%7Bi%3D1%7D%5En%7Cw_i%7C)%2B%5Cfrac%7Bl-r%7D%7B2%7D%5Calpha%5ClVert%20w%5CrVert%5E2"></div>
+$$
 
 세 가지 정규화 방법 중에 보통 Ridge를 기본으로 많이 사용되지만, 일부 적은 feature만 유용할 때 Lasso 나 Elastic Net을 사용한다. 보통 Lasso의 경우 feature의 개수가 training instance보다 많거나 일부 feature들이 correlate될 때 예측이 어려우므로, Lasso 보다 Elastic Net이 선호된다.
 
@@ -316,10 +302,7 @@ elastic_net.predict([[1.5]])
 
 - logit (log-odds) : logistic function의 역으로, positive class인지 negative class인지 측정된 확률(p)의 ratio의 log 값이다.
     
-    <!-- $$logit(p) = log(p/(1-p))$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div>
-    
+    $$logit(p) = log(p/(1-p))$$
 
 closed-form equation이 아니기 때문에, 비용함수를 최소화 하는 parameter를 계산하는 것이 어렵지만, 비용함수가 convex 형태일 경우 Gradient Descent와 같은 최적화 알고리즘을 사용한다면 global optimum을 찾을 수 있다.
 
@@ -353,37 +336,20 @@ closed-form equation이 아니기 때문에, 비용함수를 최소화 하는 pa
 
 Scikit-Learn 라이브러리에서의 구현은 Classification and Regression Tree(CART) 알고리즘을 기반으로 학습한다.
 
-먼저, 학습 데이터에 대해 하나의 feature <!-- $$k$$ --> 
+먼저, 학습 데이터에 대해 하나의 feature $k$ 와 그에 대한 threshold $t_k$ 를 기준으로 두 개의 subset으로 나눈다. 이 때, threshold는 잘 분리된(Purest) Subset이 되도록 $(k, t_k)$ 쌍을 찾아서 설정한다.
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 와 그에 대한 threshold <!-- $$t_k$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 를 기준으로 두 개의 subset으로 나눈다. 이 때, threshold는 잘 분리된(Purest) Subset이 되도록 <!-- $$(k, t_k)$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 쌍을 찾아서 설정한다.
-
-<!-- $$
+$$
 J(k,t_k)=\frac{m_{left}}{m}G_{left}+\frac{m_{right}}{m}G_{right}
-$$ --> 
+$$
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=J(k%2Ct_k)%3D%5Cfrac%7Bm_%7Bleft%7D%7D%7Bm%7DG_%7Bleft%7D%2B%5Cfrac%7Bm_%7Bright%7D%7D%7Bm%7DG_%7Bright%7D"></div>
 
-<!-- $$G_{left/right}$$ --> 
+$G_{left/right}$ 는 left, right subset의 잘 분리되지 않음의 정도(impurity)를 뜻하고, $m_{left/right}$ 은 left, right 각 subset의 개수를 뜻한다. 
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 는 left, right subset의 잘 분리되지 않음의 정도(impurity)를 뜻하고, <!-- $$m_{left/right}$$ --> 
+Regression 문제에 적용한다면, $G_{left/right}$  대신 $$MSE_{left/right}$ loss를 사용한다.
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 은 left, right 각 subset의 개수를 뜻한다. 
-
-Regression 문제에 적용한다면, <!-- $$G_{left/right}$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> 대신 <!-- $$MSE_{left/right}$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div> loss를 사용한다.
-
-<!-- $$
+$$
 MSE_{node} = \sum_{i \in node}(\hat y_{node} - y^{(i)})^2 \\ \hat y_{node}= \frac{1}{m_{node}}\sum_{i \in node}y^{(i)}
-$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=MSE_%7Bnode%7D%20%3D%20%5Csum_%7Bi%20%5Cin%20node%7D(%5Chat%20y_%7Bnode%7D%20-%20y%5E%7B(i)%7D)%5E2%20%5C%5C%20%5Chat%20y_%7Bnode%7D%3D%20%5Cfrac%7B1%7D%7Bm_%7Bnode%7D%7D%5Csum_%7Bi%20%5Cin%20node%7Dy%5E%7B(i)%7D"></div>
+$$
 
 **max_depth** parameter로 두어, 위의 과정을 재귀적으로 반복하며 depth만큼의 트리를 구축한다.
 
