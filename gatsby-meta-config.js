@@ -20,7 +20,7 @@ module.exports = {
     social: {
       github: `https://github.com/Sunkyoung`, // `https://github.com/zoomKoding`,
       linkedIn: `https://www.linkedin.com/in/sunkyoung-kim`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
-      email: `sunkyoung@kaist.ac.kr`, // `zoomkoding@gmail.com`,
+      email: `wendy.sk.kim@gmail.com`, // `zoomkoding@gmail.com`,
       englishCV: `/CV_SunkyoungKim.pdf`,
       koreanResume: 'https://sunkyoung.notion.site/sunkyoung/Sunkyoung-Kim-b15dbaac792d4f368f5e88591641c631',
     },
